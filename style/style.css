@@ -49,6 +49,16 @@
 	color: white;
 }
 
+.black-text {
+	color: black !important;
+	text-decoration: none !important;
+}
+
+.white-text {
+	color: white !important;
+	text-decoration: none !important;
+}
+
 .gradient {
 	background: rgb(132,94,194);
 	background: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
@@ -64,12 +74,14 @@
 body {
 }
 
+
 .title {
 	background: rgb(132,94,194);
 	background: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
 	color: white;
 	text-align: center;
 	z-index: 10;
+	position: relative;
 }
 
 .title-text {
@@ -209,10 +221,10 @@ body {
 }
 
 .navBar {
-	z-index: -1;
+	z-index: 1;
 	position: fixed;
 	left: 60px;
-	width: 50px;
+	width: 80px;
 	height: 60%;
 	top: 0;
 	margin-top: 20%;
@@ -223,12 +235,11 @@ body {
 }
 
 .navBarElement {
-	width: 50px;
+	width: 80px;
 	margin-top: 20%;
 	display: inline-block;
     position: relative;
     transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
-    opacity: 0.99;
 }
 
 .crossed {
@@ -280,11 +291,6 @@ body {
 	.gradient-text {
 		font-size: 12rem;
 	}
-}
-
-.qa {
-	z-index: -2;
-	opacity: 0.99;
 }
 
 /* Button Plugin */
@@ -366,10 +372,10 @@ body {
     content:'';
     position: absolute;
     display: block;
-    width: 60%;
+    width: 35%;
     height: 3px;
     /*box-shadow: 0 1px rgba(255,255,255,0.6);*/
-    margin-left: -10%;
+    margin-left: -5%;
     margin-top: -0.9em;
     background: black;
     transform-origin: center left;
@@ -382,7 +388,7 @@ body {
 
 .strikethrough:hover {
     color: rgba(200,0,0,1);
-    background: rgba(255, 189, 182, 0.3);
+    background: rgba(121, 102, 188, 0.6);
 }
 
 .strikethrough:hover:after {
