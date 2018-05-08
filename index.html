@@ -41,6 +41,20 @@
     </div>
   	</div>
 
+<!-- NavBar -->
+  <div class="navBar">
+    <div id="NavBar-1" class="navBarElement crossed">01</div>
+    <div id="NavBar-2" class="navBarElement">02</div>
+    <div id="NavBar-3" class="navBarElement">03</div>
+    <div id="NavBar-4" class="navBarElement">04</div>
+    <div id="NavBar-5" class="navBarElement">05</div>
+    <div id="NavBar-6" class="navBarElement">06</div>
+    <div id="NavBar-7" class="navBarElement">07</div>
+    <div id="NavBar-8" class="navBarElement">08</div>
+    <div id="NavBar-9" class="navBarElement">09</div>
+  </div>
+
+
 
 <!-- Mision -->
   	<div id="mission" class="container-fluid mission">
@@ -212,38 +226,7 @@
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <script>
-    // Smooth # scrolling jQuery script
-    $('a[href*="#"]')
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function(event) {
-        if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-          && 
-          location.hostname == this.hostname
-        ) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000, function() {
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                return false;
-              } else {
-                $target.attr('tabindex','-1');
-                $target.focus();
-              };
-            });
-          }
-        }
-      });
-
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
   </body>
 </html>

@@ -69,6 +69,7 @@ body {
 	background: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
 	color: white;
 	text-align: center;
+	z-index: 1;
 }
 
 .title-text {
@@ -76,6 +77,8 @@ body {
 	font-size: 3.8rem;
 	margin-top: 40%;
 	margin-bottom: 20%;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 
 
@@ -205,7 +208,28 @@ body {
 	}
 }
 
+.navBar {
+	z-index: -0;
+	position: fixed;
+	left: 60px;
+	width: 50px;
+	height: 60%;
+	top: 0;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	font-size: 1rem;
+	font-family: sf-bold;
+	color: black;
+}
 
+.navBarElement {
+	width: 50px;
+	margin-top: 20%;
+}
+
+.crossed {
+	text-decoration: line-through;
+}
 
 /* Text + Section Titles */
 .section-title {
