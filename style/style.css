@@ -69,7 +69,7 @@ body {
 	background: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
 	color: white;
 	text-align: center;
-	z-index: 1;
+	z-index: 100;
 }
 
 .title-text {
@@ -209,7 +209,7 @@ body {
 }
 
 .navBar {
-	z-index: -0;
+	z-index: -1;
 	position: fixed;
 	left: 60px;
 	width: 50px;
@@ -225,6 +225,9 @@ body {
 .navBarElement {
 	width: 50px;
 	margin-top: 20%;
+	display: inline-block;
+    position: relative;
+    transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
 }
 
 .crossed {
@@ -278,6 +281,9 @@ body {
 	}
 }
 
+.qa {
+	z-index: -15 !important;
+}
 
 /* Button Plugin */
 
@@ -343,4 +349,53 @@ body {
   stroke-width: 3px;
   stroke-dashoffset: 0;
   stroke: #06D6A0;
+}
+
+
+/* Strikethrough Effect */
+
+.strikethrough {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethrough:after {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 60%;
+    height: 3px;
+    /*box-shadow: 0 1px rgba(255,255,255,0.6);*/
+    margin-left: -10%;
+    margin-top: -0.9em;
+    background: black;
+    transform-origin: center left;
+    animation: strikethrough 1s 0s cubic-bezier(.55, 0, .1, 1) 1;
+    transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.strikethrough:hover {
+    color: rgba(200,0,0,1);
+    background: rgba(255, 189, 182, 0.3);
+}
+
+.strikethrough:hover:after {
+    transform: scaleX(0);
+    transform-origin: center right;
+}
+
+
+/* Keyframes for initial animation */
+
+@keyframes strikethrough {
+    from {
+		transform: scaleX(0);
+    }
+    to {
+		transform: scaleX(1);
+    }
 }
