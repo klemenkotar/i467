@@ -1,0 +1,57 @@
+<style>
+
+@font-face {
+    font-family: sf-bold;
+    src: url(style/SF-Pro-Display-Heavy.otf);
+}
+
+@keyframes text3D {
+    from {text-shadow: 0 0;}
+    to {text-shadow: 15px -15px rgb(230, 230, 230),
+    			 	 14px -14px rgb(230, 230, 230),
+    			 	 13px -13px rgb(230, 230, 230),
+    			 	 12px -12px rgb(230, 230, 230),
+    			 	 11px -11px rgb(230, 230, 230),
+    			 	 10px -10px rgb(230, 230, 230),
+    			 	 9px -9px rgb(230, 230, 230),
+    			 	 8px -8px rgb(230, 230, 230),
+    			 	 7px -7px rgb(230, 230, 230),
+    			 	 6px -6px rgb(230, 230, 230),
+    			 	 5px -5px rgb(230, 230, 230),
+    			 	 4px -4px rgb(230, 230, 230),
+    			 	 3px -3px rgb(230, 230, 230),
+    			 	 2px -2px rgb(230, 230, 230),
+    			 	 1px -1px rgb(230, 230, 230);}
+}
+
+h1 {
+    color: transparent;
+    text-align: center;
+    top: 30%;
+    font-size: 20em;
+    position: relative;
+    font-family: sf-bold;
+
+    animation-name: text3D;
+    animation-duration: 1s;
+    animation-delay: 1s;
+
+    animation-fill-mode:forwards;
+
+   -webkit-text-stroke-width: 5px;
+   -webkit-text-stroke-color: white;
+}
+
+html {
+	background-image: url("img/UW-Quad.jpg");
+	/* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+</style>
+
+<h1>HFS VR</h1>
