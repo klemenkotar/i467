@@ -293,6 +293,66 @@ body {
 	padding-top: 10%;
 }
 
+.vr-web {
+	font-family: sf-bold;
+	text-align: center;
+	font-size: 10rem;
+	padding-top: 10%;
+}
+
+.vr-link {
+	color: black;
+	text-decoration: none;
+	animation: vr-animation-out 1s; 
+  	animation-fill-mode:forwards;	
+}
+
+.vr-link:hover {
+	background-image: -webkit-linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
+    background-image: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
+  	color:transparent;
+ 	-webkit-background-clip: text;
+  	background-clip: text;
+
+  	animation: vr-animation-in 1s; 
+  	animation-fill-mode:forwards;	
+}
+
+.web-link {
+	color: black;
+	text-decoration: none;
+	animation: web-animation-out 1s; 
+  	animation-fill-mode:forwards;	
+}
+
+.web-link:hover {
+	background-image: -webkit-linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
+    background-image: linear-gradient(38deg, rgba(132,94,194,1) 0%, rgba(0,129,207,1) 50%, rgba(97,191,141,1) 100%);
+  	color:transparent;
+ 	-webkit-background-clip: text;
+  	background-clip: text;
+
+  	animation: web-animation-in 1s; 
+  	animation-fill-mode:forwards;	
+}
+
+.x {
+	position: fixed;
+	top: 2%;
+	left: 1%;
+	height: 60px;
+	width: 60px;
+	z-index: 10;
+}
+
+.more-title {
+	font-family: sf-bold;
+	text-align: center;
+	font-size: 5rem;
+	padding-top: 5%;
+}
+
+
 .center-text {
 	font-family: sf-semibold;
 	text-align: center;
@@ -443,6 +503,7 @@ body {
 }
 
 
+
 /* Keyframes for initial animation */
 
 @keyframes strikethrough {
@@ -478,3 +539,23 @@ body {
     			 	 1px -1px rgb(235, 235, 235);}
 }
 
+@keyframes vr-animation-in {
+	from {padding-right: 0;}
+	to {padding-right: 5%;}
+}
+
+@keyframes vr-animation-out {
+	from {padding-right: 5%;}
+	to {padding-right: 0;}
+}
+
+
+@keyframes web-animation-in {
+	from {padding-left: 0;}
+	to {padding-left: 5%;}
+}
+
+@keyframes web-animation-out {
+	from {padding-left: 5%;}
+	to {padding-left: 0;}
+}
