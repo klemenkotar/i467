@@ -285,6 +285,20 @@ body {
 	text-decoration: line-through;
 }
 
+.cardboard {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -5%;
+	width: 60%;
+}
+
+.floorplan {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: -5%;
+	width: 40%;
+}
+
 /* Text + Section Titles */
 .section-title {
 	font-family: sf-bold;
