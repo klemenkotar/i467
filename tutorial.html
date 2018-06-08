@@ -15,12 +15,11 @@
 
   <body>
 
-
 <!-- NavBar -->
   <div class="navBar">
-    <div id="NavBar-1" class="navBarElement"><a href="#QA1" class="black-text">01</a><span class="white-text"> SOUND</span></div>
-    <div id="NavBar-2" class="navBarElement"><a href="#QA2" class="black-text">02</a><span class="white-text"> TOUR?</span></div>
-    <div id="NavBar-3" class="navBarElement"><a href="#QA3" class="black-text">03</a><span class="white-text"> WHY?</span></div>
+    <div id="NavBar-1" class="navBarElement"><a href="#QA1" class="white-text">01</a><span class="white-text"></span></div>
+    <div id="NavBar-2" class="navBarElement"><a href="#QA2" class="white-text">02</a><span class="white-text"></span></div>
+    <div id="NavBar-3" class="navBarElement"><a href="#QA3" class="white-text">03</a><span class="white-text"></span></div>
   </div>
 
 
@@ -30,15 +29,32 @@
 
     <div class="row">
       <div class="col-12">
-       <h1 class="vr-web" id="vr">Tutorial</h1>
+       <h1 class="vr-web" id="vr" style="position:relative;padding-bottom:0%">Tutorial</h1>
       </div>
 
     </div>
   </div>
 
 
-<!-- 1. VR -->
-  	<div id="QA1" class="container-fluid">
+  <div style="position:relative;padding-top:56.25%;margin-bottom:-32%;">
+  <iframe src="wireframes/inverse/noise.html" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:-10%;width:121%;height:100%;display:block;overflow:auto;z-index:-10;" scrolling="no"></iframe>
+  </div>
+
+
+  <!-- 1. VR -->
+    <div id="QA0" class="container-fluid inverse">
+
+    <div class="row">
+      <div class="col-12">
+       <p class="center-text large-text">Welcome to the VR tutorial. Now is the time to unfold and assemble your cardboard headset and get your Android device. Read through the features of the tour, downloade the app, insert your phone into the cardboard, and let us bring the building to you!</p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- 1. Language -->
+  	<div id="QA1" class="container-fluid inverse">
 
     <div class="row">
       <div class="col-12">
@@ -54,8 +70,8 @@
     </div>
 	</div>
 
-  <!-- 2. What -->
-    <div id="QA2" class="container-fluid">
+  <!-- 2. Follow The Light -->
+    <div id="QA2" class="container-fluid inverse">
 
     <div class="row">
       <div class="col-12">
@@ -71,8 +87,8 @@
     </div>
   </div>
 
-  <!-- 3. Problems We Solve -->
-    <div id="QA3" class="container-fluid">
+  <!-- 3. Have Fun-->
+    <div id="QA3" class="container-fluid inverse">
 
     <div class="row">
       <div class="col-12">
@@ -83,19 +99,13 @@
 
     <div class="row">
       <div class="col-12">
-       <p class="center-text large-text">Enjoy exploring your future home. As you walk around, a voice narration will provide you with information about the rooms, student life and UW in general.</p>
+       <p class="center-text large-text">Enjoy exploring your future home. As you walk around, a voice narration will provide you with information about the rooms, student life and UW in general. Click the Start button to download the app.</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-       <a href="more/why.html"><p class="center-text read-more">Learn More</p></a>
-      </div>
-    </div>
-
   </div>
 
     <!-- 4. START -->
-    <div id="START" class="container-fluid">
+    <div id="START" class="container-fluid inverse">
 
     <div id="features" class="container-fluid features">
 
@@ -117,7 +127,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main-tutorial.js"></script>
     <script src="js/scroll.js"></script>
   </body>
 </html>

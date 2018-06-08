@@ -18,8 +18,8 @@ function draw() {
 
 function drawModel() {
   var groupRadius = 200;
-  var sphereCount = 40;
-  var sphereMaxR = 25;
+  var sphereCount = 80;
+  var sphereMaxR = 15;
   
 
   for (var s=0; s < sphereCount; s++) {

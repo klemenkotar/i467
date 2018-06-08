@@ -69,6 +69,14 @@
 
 }
 
+.inverse {
+	background-color: rgb(51, 51, 51) !important;
+	padding: none;
+	margin-left: -10%;
+	color: white;
+	width: 120%;
+}
+
 .hero-image {
 	background-image: url("../img/UW-Quad.jpg");
 	/* Full height */
@@ -80,7 +88,22 @@
 
 }
 
+.uw-text {
+	font-family: polya;
+	font-size: 20em;
+	width: 80%;
+	text-align:center;
+	margin-top: -5%;
+	margin-bottom: 0%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
 
+.center-chart {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
 
 body {
 }
@@ -352,7 +375,7 @@ body {
 }
 
 .start-link {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
@@ -527,6 +550,44 @@ body {
 }
 
 .strikethrough:hover:after {
+    transform: scaleX(0);
+    transform-origin: center right;
+}
+
+
+
+/* Strikethrough Effect - Inverted */
+
+.strikethrough-inverted{
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethrough-inverted:after {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 3px;
+    /*box-shadow: 0 1px rgba(255,255,255,0.6);*/
+    margin-left: -5%;
+    margin-top: -0.9em;
+    background: white;
+    transform-origin: center left;
+    animation: strikethrough 1s 0s cubic-bezier(.55, 0, .1, 1) 1;
+    transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.strikethrough-inverted:hover {
+    color: rgba(200,0,0,1);
+    background: rgba(121, 102, 188, 0.6);
+}
+
+.strikethrough-inverted:hover:after {
     transform: scaleX(0);
     transform-origin: center right;
 }
