@@ -30,7 +30,10 @@
     src: url(SF-Pro-Display-Thin.otf);
 }
 
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /* Main Colors */
 
@@ -79,9 +82,7 @@
 
 .hero-image {
 	background-image: url("../img/UW-Quad.jpg");
-	/* Full height */
     height: 100%; 
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,33 +100,17 @@
 	margin-right: 10%;
 }
 
+@media (max-width: 500px) {
+	.uw-text {
+		font-size: 8rem;
+	}
+}
+
 .center-chart {
 	width: 60%;
 	margin-left: 20%;
 	margin-right: 20%;
 }
-
-body {
-}
-
-.animation_helper {
-    color: transparent;
-    text-align: center;
-    top: 30%;
-    font-size: 20em;
-    position: relative;
-    font-family: sf-bold;
-
-    animation-name: text3D;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-
-    animation-fill-mode:forwards;
-
-   -webkit-text-stroke-width: 5px;
-   -webkit-text-stroke-color: white;
-}
-
 
 
 .title {
@@ -155,33 +140,51 @@ body {
 
 }
 
+@media (max-width: 500px) {
+	.title-text {
+		animation-name: text3D-mobile;
+		-webkit-text-stroke-width: 3px;
+	}
+}
+
+
+@media (min-width: 300px) {
+	.title-text {
+		font-size: 10rem;
+		margin-top: 20%;
+		margin-bottom: 20%;
+	}
+}
 
 @media (min-width: 576px) {
 	.title-text {
-		font-size: 6rem;
+		font-size: 16.5rem;
 		margin-top: 20%;
+		margin-bottom: 0;
 	}
 }
 
 
 @media (min-width: 768px) {
 	.title-text {
-		font-size: 8rem;
-	}
-}
-
-@media (min-width: 992px) {
-	.title-text {
-		font-size: 10rem;
-		margin-top: 2%;
-		margin-bottom: 5%;
+		font-size: 14rem;
 	}
 }
 
 
 @media (min-width: 1200px) { 
 	.title-text {
-		font-size: 24rem;
+		font-size: 20rem;
+		margin-top: 10%;
+		margin-bottom: 10%;
+	}
+}
+
+
+
+@media (min-width: 1520px) { 
+	.title-text {
+		font-size: 26.5rem;
 		margin-top: 10%;
 		margin-bottom: 10%;
 	}
@@ -241,9 +244,15 @@ body {
 
 .button-container {
 	margin-top: 10%;
-	margin-bottom: 20%;
+	margin-bottom: 40%;
 }
 
+@media (min-width: 300px) {
+	.button-container {
+		margin-top: 10%;
+		margin-bottom: 40%;
+	}
+}
 
 @media (min-width: 576px) {
 	.button-container {
@@ -304,6 +313,22 @@ body {
     transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
 }
 
+@media (max-width: 500px) {
+	.navBar{
+		z-index: 1;
+		position: fixed;
+		left: 10px;
+		width: 80px;
+		height: 60%;
+		top: 0;
+		margin-top: 20%;
+		margin-bottom: 20%;
+		font-size: 0.8rem;
+		font-family: sf-bold;
+		color: black;
+	}
+}
+
 .crossed {
 	text-decoration: line-through;
 }
@@ -330,12 +355,26 @@ body {
 	padding-top: 10%;
 }
 
+@media (max-width: 500px) {
+	.section-title {
+		font-size: 2rem;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
 .vr-web {
 	font-family: sf-bold;
 	text-align: center;
 	font-size: 10rem;
 	padding-top: 5%;
 	padding-bottom: 5%;
+}
+
+@media (max-width: 500px) {
+	.vr-web {
+		font-size: 4rem;
+	}
 }
 
 .vr-link {
@@ -421,6 +460,18 @@ body {
 	margin-right: 30%;
 }
 
+
+@media (max-width: 500px) {
+	.large-text {
+		font-size: 1rem;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+}
+
+@medi
+
 .icon-3 {
 	font-size: 5rem;
 	text-align: center;
@@ -432,6 +483,12 @@ body {
 	margin-top: -10%;
 	color: rgb(48,117,197);
 	font-family: 'sf-thin'
+}
+
+@media (max-width: 500px) {
+	.read-more {
+		font-size: 1rem;
+	}
 }
 
 .gradient-text {
@@ -515,6 +572,71 @@ body {
   stroke-width: 3px;
   stroke-dashoffset: 0;
   stroke: #06D6A0;
+}
+
+.toroid-wrapper {
+	position:relative;
+	padding-top:56.25%;
+	margin-bottom:-40%;
+}
+
+
+@media (max-width: 1400px) { 
+	.toroid-wrapper {
+		margin-bottom: -20%;
+	}
+}
+
+@media (max-width: 1200px) { 
+	.toroid-wrapper {
+		margin-bottom: -20%;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.toroid-wrapper {
+		margin-bottom: 20%;
+		margin-top: -20%;
+	}
+}
+
+
+/* Styling for p5.js wireframes */
+
+.toroid {
+	position:absolute;
+	top:0;
+	left:-1%;
+	width:101%;
+	height:100%;
+	display:block;
+	overflow:auto;
+}
+
+@media (max-width: 500px) {
+
+	.toroid {
+		height:140%;
+
+	}
+}
+
+.brake-wrapper {
+	position:relative;
+	padding-top:20%; 
+	margin-bottom:0px;
+}
+
+.break {
+	position:absolute;
+	top: 20%;
+	left:-1%;
+	width:101%;
+	height:100%;
+	display:block;
+	overflow:auto;
+	z-index:99;
 }
 
 
@@ -626,7 +748,23 @@ body {
     			 	 4px -4px rgb(235, 235, 235),
     			 	 3px -3px rgb(235, 235, 235),
     			 	 2px -2px rgb(235, 235, 235),
-    			 	 1px -1px rgb(235, 235, 235);}
+    			 	 1px -1px rgb(235, 235, 235),
+    			 	 0px -0px rgb(235, 235, 235);}
+}
+
+@keyframes text3D-mobile {
+    from {text-shadow: 0 0;}
+    to {text-shadow: 10px -10px rgb(235, 235, 235),
+    			 	 9px -9px rgb(235, 235, 235),
+    			 	 8px -8px rgb(235, 235, 235),
+    			 	 7px -7px rgb(235, 235, 235),
+    			 	 6px -6px rgb(235, 235, 235),
+    			 	 5px -5px rgb(235, 235, 235),
+    			 	 4px -4px rgb(235, 235, 235),
+    			 	 3px -3px rgb(235, 235, 235),
+    			 	 2px -2px rgb(235, 235, 235),
+    			 	 1px -1px rgb(235, 235, 235),
+    			 	 0px -0px rgb(235, 235, 235);}
 }
 
 @keyframes vr-animation-in {
