@@ -1,8 +1,17 @@
 
 var cols, rows;
 var scl = 40;
+
 var w = 7000;
 var h = 4000;
+
+var xTrans = -900;
+var yTrans = 50;
+
+if (window.innerWidth < 800) {
+  xTrans = -3500;
+  yTrans = 50;
+}
 
 var flying = 0.0;
 
@@ -16,15 +25,13 @@ function setup() {
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
     for (var y = 0; y < rows; y++) {
-      terrain[x][y] = 0; //specify a default value for now
+      terrain[x][y] = 0; 
     }
   }
 }
 
 
 function draw() {
-
-  noLoop()
 
   flying -= 0.1;
 
@@ -39,11 +46,10 @@ function draw() {
   }
 
 
-
   background(255);
   stroke(0);
   noFill();
-  translate(width/2-900, height/2+50);
+  translate(width/2+xTrans, height/2+yTrans);
   rotateX(PI/4);
   translate(-w/2, -h/2);
   for (y = 0; y < rows-1; y++) {
@@ -51,7 +57,6 @@ function draw() {
     for (x = 0; x < cols; x++) {
       vertex(x*scl, y*scl, terrain[x][y]);
       vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
-      //rect(x*scl, y*scl, scl, scl);
     }
     endShape();
   }
